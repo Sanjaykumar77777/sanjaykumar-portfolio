@@ -25,15 +25,15 @@ const Navigation = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 p-6"
+      className="fixed top-0 left-0 right-0 z-50 p-3 md:p-6"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="glass rounded-2xl px-6 py-4">
+        <div className="glass rounded-xl md:rounded-2xl px-3 py-2 md:px-6 md:py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-2xl font-bold gradient-text font-mono"
+              className="text-lg md:text-2xl font-bold gradient-text font-mono"
             >
               &lt;Portfolio/&gt;
             </motion.div>
@@ -69,10 +69,10 @@ const Navigation = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="md:hidden p-2 text-foreground"
+              className="md:hidden p-1.5 text-foreground"
             >
               <svg
-                className="w-6 h-6"
+                className="w-5 h-5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
