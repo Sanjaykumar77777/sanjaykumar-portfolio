@@ -56,7 +56,7 @@ const Navigation = () => {
                   {activeSection === item.id && (
                     <motion.div
                       layoutId="activeSection"
-                      className="absolute inset-0 bg-primary/10 rounded-lg border border-primary/20"
+                      className="absolute inset-0 bg-primary/10 rounded-lg border-[0.5px] border-primary/20"
                       initial={false}
                       transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     />
