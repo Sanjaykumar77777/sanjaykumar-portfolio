@@ -3,6 +3,7 @@ import { useState } from "react";
 
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState("home");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
     { id: "home", label: "Home" },
@@ -14,6 +15,7 @@ const Navigation = () => {
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
+    setIsMobileMenuOpen(false); // Close mobile menu when navigating
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -67,6 +69,7 @@ const Navigation = () => {
 
             {/* Mobile Menu Button */}
             <motion.button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="md:hidden p-1.5 text-foreground"
@@ -87,6 +90,34 @@ const Navigation = () => {
             </motion.button>
           </div>
         </div>
+        
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="md:hidden mt-2 glass rounded-xl p-4"
+          >
+            <div className="flex flex-col space-y-3">
+              {navItems.map((item) => (
+                <motion.button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className={`relative p-3 text-left rounded-lg transition-all duration-300 ${
+                    activeSection === item.id
+                      ? "bg-primary/10 text-primary border-[0.5px] border-primary/20"
+                      : "text-muted-foreground hover:text-foreground hover:bg-white/5"
+                  }`}
+                >
+                  {item.label}
+                </motion.button>
+              ))}
+            </div>
+          </motion.div>
+        )}
       </div>
     </motion.nav>
   );
