@@ -10,17 +10,17 @@ import Contact from "@/components/Contact";
 const Index = () => {
   useEffect(() => {
     // Force dark mode for cyberpunk aesthetic
-    document.documentElement.classList.add('dark');
+    document.documentElement.classList.add("dark");
   }, []);
 
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-x-hidden">
       {/* Particle Background */}
       <ParticleBackground />
-      
+
       {/* Navigation */}
       <Navigation />
-      
+
       {/* Main Content */}
       <main className="relative z-10">
         <Hero />
@@ -29,12 +29,13 @@ const Index = () => {
         <Skills />
         <Contact />
       </main>
-      
+
       {/* Footer */}
       <footer className="relative z-10 py-8 text-center border-t border-border/20">
         <div className="max-w-6xl mx-auto px-6">
           <p className="text-muted-foreground">
-            © 2024 Your Name. Crafted with 💜 using React, Framer Motion & Three.js
+            © 2025 | Sanjaykumar | Crafted with 💜 React, Framer Motion &
+            Three.js
           </p>
         </div>
       </footer>

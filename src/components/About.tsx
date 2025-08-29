@@ -43,7 +43,8 @@ const About = () => {
               About Me
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Get to know more about who I am and what drives my passion for development
+              Get to know more about who I am and what drives my passion for
+              development
             </p>
           </motion.div>
 
@@ -54,7 +55,9 @@ const About = () => {
                 <div className="w-64 h-64 mx-auto mb-6 bg-gradient-primary rounded-full flex items-center justify-center">
                   <span className="text-6xl">👨‍💻</span>
                 </div>
-                <h3 className="text-2xl font-bold gradient-text mb-2">John Doe</h3>
+                <h3 className="text-2xl font-bold gradient-text mb-2">
+                  Sanjaykumar
+                </h3>
                 <p className="text-muted-foreground">Full Stack Developer</p>
               </Card>
             </motion.div>
@@ -66,16 +69,18 @@ const About = () => {
                   Crafting Digital Experiences
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  I'm a passionate full-stack developer with over 5 years of experience 
-                  creating innovative web applications. My journey began with curiosity 
-                  about how websites work, and it has evolved into a deep love for 
-                  building scalable, user-friendly solutions.
+                  I am an enthusiastic and eager MERN stack developer with a
+                  strong passion for building web applications. Though I am at
+                  the start of my career, I have a keen interest in learning how
+                  websites work and enjoy creating simple, efficient, and
+                  user-friendly solutions.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  I specialize in React, Node.js, and modern web technologies. 
-                  When I'm not coding, you can find me exploring new frameworks, 
-                  contributing to open-source projects, or sharing knowledge with 
-                  the developer community.
+                  I am currently focusing on mastering React, Node.js, MongoDB,
+                  and Express while exploring the latest web technologies.
+                  Outside of coding, I like to learn new frameworks, contribute
+                  to open-source projects, and connect with the developer
+                  community to grow my skills and knowledge.
                 </p>
               </div>
 
@@ -85,29 +90,37 @@ const About = () => {
                   whileHover={{ scale: 1.05 }}
                   className="glass p-4 rounded-lg text-center"
                 >
-                  <div className="text-3xl font-bold gradient-text">50+</div>
-                  <div className="text-sm text-muted-foreground">Projects Completed</div>
+                  <div className="text-3xl font-bold gradient-text">3+</div>
+                  <div className="text-sm text-muted-foreground">
+                    Projects Completed
+                  </div>
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   className="glass p-4 rounded-lg text-center"
                 >
-                  <div className="text-3xl font-bold gradient-text">5+</div>
-                  <div className="text-sm text-muted-foreground">Years Experience</div>
+                  <div className="text-3xl font-bold gradient-text">N/A</div>
+                  <div className="text-sm text-muted-foreground">
+                    Years Experience
+                  </div>
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   className="glass p-4 rounded-lg text-center"
                 >
-                  <div className="text-3xl font-bold gradient-text">30+</div>
-                  <div className="text-sm text-muted-foreground">Happy Clients</div>
+                  <div className="text-3xl font-bold gradient-text">10+</div>
+                  <div className="text-sm text-muted-foreground">
+                    Mini-Projects Completed
+                  </div>
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   className="glass p-4 rounded-lg text-center"
                 >
                   <div className="text-3xl font-bold gradient-text">24/7</div>
-                  <div className="text-sm text-muted-foreground">Availability</div>
+                  <div className="text-sm text-muted-foreground">
+                    Availability
+                  </div>
                 </motion.div>
               </div>
             </motion.div>

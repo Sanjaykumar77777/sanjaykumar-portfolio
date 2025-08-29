@@ -13,12 +13,12 @@ const Skills = () => {
       icon: "🎨",
       skills: [
         { name: "React", level: 95 },
-        { name: "TypeScript", level: 90 },
-        { name: "Next.js", level: 85 },
-        { name: "Three.js", level: 80 },
+        { name: "JavaScript", level: 90 },
+        { name: "HTML", level: 95 },
+        { name: "Bootstrap CSS", level: 80 },
         { name: "Tailwind CSS", level: 95 },
-        { name: "Framer Motion", level: 88 }
-      ]
+        { name: "Three js", level: 88 },
+      ],
     },
     {
       title: "Backend",
@@ -26,24 +26,24 @@ const Skills = () => {
       skills: [
         { name: "Node.js", level: 90 },
         { name: "Express.js", level: 85 },
-        { name: "Python", level: 80 },
-        { name: "PostgreSQL", level: 85 },
+        { name: "Java", level: 80 },
+        { name: "SQL", level: 85 },
         { name: "MongoDB", level: 88 },
-        { name: "Redis", level: 75 }
-      ]
+        { name: "REST API", level: 75 },
+      ],
     },
     {
       title: "Tools & Others",
       icon: "🛠️",
       skills: [
         { name: "Git & GitHub", level: 95 },
-        { name: "Docker", level: 80 },
-        { name: "AWS", level: 75 },
-        { name: "Figma", level: 85 },
-        { name: "Jest", level: 80 },
-        { name: "Webpack", level: 75 }
-      ]
-    }
+        { name: "Canva", level: 80 },
+        { name: "Capcut", level: 75 },
+        { name: "Intellij Editor", level: 85 },
+        { name: "Visual Studio Code", level: 80 },
+        { name: "Webpack", level: 75 },
+      ],
+    },
   ];
 
   const containerVariants = {
@@ -127,7 +127,7 @@ const Skills = () => {
                             {skill.level}%
                           </span>
                         </div>
-                        
+
                         {/* Progress Bar */}
                         <div className="h-2 bg-muted rounded-full overflow-hidden">
                           <motion.div
@@ -156,7 +156,7 @@ const Skills = () => {
                 { icon: "🚀", label: "Performance Optimization" },
                 { icon: "📱", label: "Responsive Design" },
                 { icon: "🔒", label: "Security Best Practices" },
-                { icon: "🔄", label: "CI/CD Pipelines" }
+                { icon: "🔄", label: "CI/CD Pipelines" },
               ].map((highlight, index) => (
                 <motion.div
                   key={index}

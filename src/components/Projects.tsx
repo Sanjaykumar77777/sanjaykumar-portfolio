@@ -11,59 +11,65 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A modern e-commerce platform built with React, Node.js, and MongoDB. Features include real-time inventory, payment processing, and admin dashboard.",
-      image: "🛒",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      github: "#",
-      live: "#",
-      gradient: "from-purple-500 to-pink-500"
+      title: "Edemy",
+      description:
+        "Edemy is an intuitive, modern LMS frontend created to enhance the digital learning journey. It boasts a clean login interface, offering flexible authentication methods—such as standard email/password and convenient Gmail login options—making access quick and seamless.",
+      image: "📚",
+      technologies: ["React", "Node.js", "MongoDB", "Stripe", "Vercel"],
+      github: "https://github.com/Sanjaykumar77777/LMS",
+      live: "https://lms-frontend-nine-rosy.vercel.app/",
+      gradient: "from-purple-500 to-pink-500",
     },
     {
-      title: "Task Management App",
-      description: "Collaborative task management application with real-time updates, team collaboration features, and intuitive drag-and-drop interface.",
+      title: "PriceHub",
+      description:
+        "PriceCompare Hub is a smart price comparison platform that helps users find the best deals across major Indian e-commerce websites like Flipkart, Snapdeal, and ShopClues. With real-time updates, our website scans these platforms to display the latest prices for your favorite products—all in one place.",
       image: "📋",
-      technologies: ["React", "TypeScript", "Firebase", "Tailwind"],
-      github: "#",
-      live: "#",
-      gradient: "from-blue-500 to-cyan-500"
+      technologies: ["HTML", "Javascript", "Bootstrap", "JSP"],
+      github: "https://github.com/Sanjaykumar77777/OPCW",
+      live: "https://github.com/Sanjaykumar77777/OPCW",
+      gradient: "from-blue-500 to-cyan-500",
     },
     {
       title: "3D Portfolio Website",
-      description: "Interactive 3D portfolio website using Three.js with smooth animations, particle effects, and responsive design.",
+      description:
+        "Explore a visually stunning 3D portfolio showcasing creative projects with immersive animations, interactive elements, and a modern design. Highlighting skills, experiences, and achievements, it delivers a dynamic, engaging, and professional presentation for clients, employers, and collaborators",
       image: "🎨",
-      technologies: ["Three.js", "React", "Framer Motion", "GLSL"],
-      github: "#",
-      live: "#",
-      gradient: "from-green-500 to-emerald-500"
+      technologies: ["Javascript", "React", "Three js", "Firebase"],
+      github: "https://github.com/Sanjaykumar77777/Portfolio_web",
+      live: "https://github.com/Sanjaykumar77777/Portfolio_web",
+      gradient: "from-green-500 to-emerald-500",
     },
-    {
-      title: "AI Chat Application",
-      description: "Real-time chat application with AI integration, featuring smart responses, file sharing, and video calls.",
-      image: "🤖",
-      technologies: ["React", "WebRTC", "OpenAI", "Socket.io"],
-      github: "#",
-      live: "#",
-      gradient: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Cryptocurrency Tracker",
-      description: "Real-time cryptocurrency tracking dashboard with portfolio management, price alerts, and market analysis.",
-      image: "💰",
-      technologies: ["React", "Chart.js", "CoinGecko API", "Redux"],
-      github: "#",
-      live: "#",
-      gradient: "from-indigo-500 to-purple-500"
-    },
-    {
-      title: "Social Media Dashboard",
-      description: "Analytics dashboard for social media management with post scheduling, engagement tracking, and performance metrics.",
-      image: "📊",
-      technologies: ["React", "D3.js", "Node.js", "PostgreSQL"],
-      github: "#",
-      live: "#",
-      gradient: "from-teal-500 to-blue-500"
-    }
+    // {
+    //   title: "AI Chat Application",
+    //   description:
+    //     "Real-time chat application with AI integration, featuring smart responses, file sharing, and video calls.",
+    //   image: "🤖",
+    //   technologies: ["React", "WebRTC", "OpenAI", "Socket.io"],
+    //   github: "#",
+    //   live: "#",
+    //   gradient: "from-orange-500 to-red-500",
+    // },
+    // {
+    //   title: "Cryptocurrency Tracker",
+    //   description:
+    //     "Real-time cryptocurrency tracking dashboard with portfolio management, price alerts, and market analysis.",
+    //   image: "💰",
+    //   technologies: ["React", "Chart.js", "CoinGecko API", "Redux"],
+    //   github: "#",
+    //   live: "#",
+    //   gradient: "from-indigo-500 to-purple-500",
+    // },
+    // {
+    //   title: "Social Media Dashboard",
+    //   description:
+    //     "Analytics dashboard for social media management with post scheduling, engagement tracking, and performance metrics.",
+    //   image: "📊",
+    //   technologies: ["React", "D3.js", "Node.js", "PostgreSQL"],
+    //   github: "#",
+    //   live: "#",
+    //   gradient: "from-teal-500 to-blue-500",
+    // },
   ];
 
   const containerVariants = {
@@ -117,10 +123,12 @@ const Projects = () => {
               >
                 <Card className="glass h-full overflow-hidden transition-all duration-300 hover:shadow-neon">
                   {/* Project Image */}
-                  <div className={`h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}>
+                  <div
+                    className={`h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}
+                  >
                     <div className="text-6xl opacity-80">{project.image}</div>
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300" />
-                    
+
                     {/* Hover Links */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
                       <div className="flex gap-4">
@@ -152,7 +160,7 @@ const Projects = () => {
                     <p className="text-muted-foreground mb-4 leading-relaxed">
                       {project.description}
                     </p>
-                    
+
                     {/* Technologies */}
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech, techIndex) => (
@@ -171,6 +179,7 @@ const Projects = () => {
                         <Github className="w-4 h-4 mr-2" />
                         Code
                       </Button>
+
                       <Button size="sm" className="flex-1 bg-gradient-primary">
                         <ExternalLink className="w-4 h-4 mr-2" />
                         Live Demo

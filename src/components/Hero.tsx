@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import FloatingIcons from "./FloatingIcons";
+import { Navigate } from "react-router-dom";
 
 const Hero = () => {
   const containerVariants = {
@@ -26,10 +27,13 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* 3D Floating Icons Background */}
       <FloatingIcons />
-      
+
       {/* Hero Content */}
       <motion.div
         variants={containerVariants}
@@ -38,10 +42,7 @@ const Hero = () => {
         className="relative z-10 text-center max-w-6xl mx-auto px-6"
       >
         {/* Greeting */}
-        <motion.div
-          variants={itemVariants}
-          className="mb-6"
-        >
+        <motion.div variants={itemVariants} className="mb-6">
           <span className="text-lg md:text-xl text-muted-foreground font-mono">
             Hello, I'm
           </span>
@@ -52,14 +53,11 @@ const Hero = () => {
           variants={itemVariants}
           className="text-5xl md:text-8xl font-bold mb-6 gradient-text"
         >
-          Your Name
+          Sanjaykumar
         </motion.h1>
 
         {/* Animated Subtitle */}
-        <motion.div
-          variants={itemVariants}
-          className="mb-8"
-        >
+        <motion.div variants={itemVariants} className="mb-8">
           <motion.h2
             className="text-2xl md:text-4xl font-semibold text-foreground"
             initial={{ opacity: 0 }}
@@ -88,8 +86,9 @@ const Hero = () => {
           variants={itemVariants}
           className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed"
         >
-          Passionate about creating innovative digital experiences with modern technologies. 
-          I build responsive web applications, interactive 3D experiences, and scalable solutions.
+          Passionate about creating innovative digital experiences with modern
+          technologies. I build responsive web applications, interactive 3D
+          experiences, and scalable solutions.
         </motion.p>
 
         {/* Call to Action Buttons */}
@@ -98,15 +97,28 @@ const Hero = () => {
           className="flex flex-col sm:flex-row gap-6 justify-center items-center"
         >
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button className="btn-hero px-8 py-4 text-lg">
+            <Button
+              className="btn-hero px-8 py-4 text-lg"
+              onClick={() =>
+                document
+                  .getElementById("projects")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
               View My Work
             </Button>
           </motion.div>
-          
+
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button variant="outline" className="btn-secondary px-8 py-4 text-lg">
-              Download Resume
-            </Button>
+            <a href="../../public/RESUME-SANJAY  (1) (1).pdf" download>
+              {" "}
+              <Button
+                variant="outline"
+                className="btn-secondary px-8 py-4 text-lg"
+              >
+                Download Resume
+              </Button>
+            </a>
           </motion.div>
         </motion.div>
 
@@ -114,7 +126,12 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2, duration: 1, repeat: Infinity, repeatType: "reverse" }}
+          transition={{
+            delay: 2,
+            duration: 1,
+            repeat: Infinity,
+            repeatType: "reverse",
+          }}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         >
           <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">

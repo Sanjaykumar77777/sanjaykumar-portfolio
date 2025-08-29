@@ -37,7 +37,7 @@ const Navigation = () => {
               whileHover={{ scale: 1.05 }}
               className="text-lg md:text-2xl font-bold gradient-text font-mono"
             >
-              &lt;Portfolio/&gt;
+              Sanjaykumar
             </motion.div>
 
             {/* Navigation Items */}
@@ -60,7 +60,11 @@ const Navigation = () => {
                       layoutId="activeSection"
                       className="absolute inset-0 bg-primary/10 rounded-lg border-[0.5px] border-primary/20"
                       initial={false}
-                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 30,
+                      }}
                     />
                   )}
                 </motion.button>
@@ -90,7 +94,7 @@ const Navigation = () => {
             </motion.button>
           </div>
         </div>
-        
+
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <motion.div
